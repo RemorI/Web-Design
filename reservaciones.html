@@ -1,0 +1,361 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  
+  <header class="site-header">
+    <div class="hero">
+      <div class="content-header">
+        <nav class="social-media">
+          <a href="#"><i class="fab f-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </nav>
+        <div class="info-event">
+          <div class="clearfix"></div>
+          <h1 class="site-name">Web Desing</h1>
+          <p class="slogan">Modern, Comfortable, Pratical.</p>
+        </div>
+      </div>
+    </div> <!--.hero-->
+  </header>
+
+  <div class="bar">
+    <div class="container clearfix">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="logo gdlwebcamp" />
+        </a>
+      </div>
+      <div class="menu-movil">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="main-nav">
+        <a href="#">Conferences</a>
+        <a href="#">Calendar</a>
+        <a href="#">Guests</a>
+        <a href="reservaciones.html">Reservations</a>
+      </nav>
+    </div>
+  </div><!--bar-->
+
+  <section class="section container">
+    <h2>User register</h2>
+    <form id="registro" class="registro" action="index.html" method="post">
+      <div id="user-datos" class="registro box clearfix">
+        <div class="campo">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your name">
+        </div>
+        <div class="campo">
+          <label for="lastname">Lastname:</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Your lastmame">
+        </div>
+          <div class="campo">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="Your E-mail">
+        </div>
+        <div id="error"></div>
+      </div>
+      <div id="pack" class="pack">
+        <h3>Choose the number of passes</h3>
+
+        <ul class="list-price clearfix">
+        <li>
+          <div class="table-price">
+            <h3>Pass by day (Friday)</h3>
+            <p class="number">$30</p>
+            <ul>
+              <li>Sanwiches</li>
+              <li>All Workshops</li>
+              <li>All conferences</li>
+            </ul>
+            <div class="orden">
+              <label for="pase_dia">Choose passes</label>
+              <input type="number" min="0" id="pase_dia" size="3" placeholder="0">
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="table-price">
+            <h3>All days</h3>
+            <p class="number">$50</p>
+            <ul>
+              <li>Sanwiches</li>
+              <li>All Workshops</li>
+              <li>All conferences</li>
+            </ul>
+            <div class="orden">
+              <label for="pase_completo">Choose passes</label>
+              <input type="number" min="0" id="pase_completo" size="3" placeholder="0">
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="table-price">
+            <h3>Pass for 2 days (Frinday and Saturday)</h3>
+            <p class="number">$45</p>
+            <ul>
+              <li>Sandwiches</li>
+              <li>All Workshops</li>
+              <li>All conferences</li>
+            </ul>
+            <div class="orden">
+              <label for="pase_2dia">Choose passes</label>
+              <input type="number" min="0" id="pase_2dia" size="3" placeholder="0">
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      </div>
+
+      <div id="events" class="events clearfix">
+        <h3>Choose your workshops</h3>
+        <div class="box">
+          <div id="viernes" class="day-content clearfix">
+            <h4>Friday</h4>
+            <div>
+              <p>Workshops:</p>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_01" value="taller_01"><time>10:00</time> Responsive Web Design
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_02" value="taller_02"><time>12:00</time> Flexbox
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_03" value="taller_03"><time>14:00</time> HTML5 y CSS3
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_04" value="taller_04"><time>17:00</time> Drupal
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_05" value="taller_05"><time>19:00</time> WordPress
+              </label>
+            </div>
+            <div>
+              <p>Conferences:</p>
+              <label>
+                <input type="checkbox" name="registro[]" id="conf_01" value="conf_01"><time>10:00</time> How to be Freelancer
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="conf_02" value="conf_02"><time>17:00</time> Future's technologies
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="conf_03" value="conf_03"><time>19:00</time> Security on Web
+              </label>
+            </div>
+            <div>
+              <p>Seminarios:</p>
+              <label>
+                <input type="checkbox" name="registro[]" id="sem_01" value="sem_01"><time>10:00</time> Mobile Design UI / UX 
+             </label>
+            </div>
+          </div> <!--#viernes-->
+          <div id="sabado" class="day-content clearfix">
+            <h4>satuday</h4>
+            <div>
+              <p>Workshops:</p>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_06" value="taller_06"><time>10:00</time> AngularJS
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_07" value="taller_07"><time>12:00</time> PHP y MySQL
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_08" value="taller_08"><time>14:00</time> Advanced JavaScript
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_09" value="taller_09"><time>17:00</time> SEO on Google
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_10" value="taller_10"><time>19:00</time> Photoshop to HTML5 y CSS3
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_11" value="taller_11"><time>21:00</time> Advanced PHP
+              </label>
+            </div>
+            <div>
+              <p>Conferences:</p>
+              <label>
+                <input type="checkbox" name="registro[]" id="conf_04" value="conf_04"><time>10:00</time> Start making money with your own online store
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="conf_05" value="conf_05"><time>17:00</time> Best places for find a job
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="conf_06" value="conf_06"><time>19:00</time> Steps to create a business plan
+              </label>
+            </div>
+            <div>
+              <p>Seminaries:</p>
+              <label>
+                <input type="checkbox" name="registro[]" id="sem_02" value="sem_02"><time>10:00</time> Learn program in one day
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="sem_03" value="sem_03"><time>17:00</time> Mobile design UI / UX
+              </label>
+            </div>
+          </div><!--sábado-->
+          <div id="domingo" class="day-content clearfix">
+            <h4>Sunday</h4>
+            <div>
+              <p>Workshops:</p>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_12" value="taller_12"><time>10:00</time> Laravel
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_13" value="taller_13"><time>12:00</time> Create your own API
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_14" value="taller_14"><time>14:00</time> JavaScript and jQuery
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_15" value="taller_15"><time>17:00</time> Create a custom page template in WordPress
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="taller_16" value="taller_16"><time>19:00</time> Magento online store
+              </label>
+            </div>
+            <div>
+              <p>Conferences:</p>
+               <label>
+                <input type="checkbox" name="registro[]" id="conf_07" value="conf_07"><time>10:00</time> Markenting Online
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="conf_08" value="conf_08"><time>17:00</time> What programming language should you learn first?
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="conf_09" value="conf_09"><time>19:00</time> Frameworks and Open Source library
+              </label>
+            </div>
+            <div>
+              <p>Seminaries:</p>
+              <label>
+                <input type="checkbox" name="registro[]" id="sem_04" value="sem_04"><time>14:00</time> Create an app Andoid in one day
+              </label>
+              <label>
+                <input type="checkbox" name="registro[]" id="sem_05" value="sem_05"><time>17:00</time> Create an app iOs in one day
+              </label>
+            </div>
+          </div> <!--#domingo-->
+        </div><!--.caja-->
+      </div> <!--#eventos-->
+
+      <div id="resumen" class="resumen">
+        <h3>Pay and Extras</h3>
+        <div class="box clearfix">
+          <div class="extras">
+            <div class="orden">
+              <label for="camisa_evento">Event T-shirt $10<small>(7% dto.)</small></label><br>
+              <input type="number" min="0" id="camisa_evento" size="3" placeholder="0">
+            </div><!--orden-->
+            <div class="orden">
+              <label for="etiquetas_evento">10 stickers $2<small>(html, css, js. google)</small></label><br>
+              <input type="number" min="0" id="etiqueta_evento" size="3" placeholder="0">
+            </div><!--orden-->
+            <div class="orden">
+              <label for="regalo">Choose a gif</label><br>
+              <select id="regalo" required>
+                <option value="">-- Choose a gif--</option>
+                <option value="ETI">Stickers</option>
+                <option value="PUL">Bracelet</option>
+                <option value="PLU">Pens</option>
+              </select>
+            </div><!--orden-->
+            <input type="button" id="calcular" class="button" value="Calculate">
+          </div><!--extras-->
+
+          <div class="total">
+            <p>Summary: </p>
+            <div id="list-product">
+              
+            </div>
+            <p>Total:</p>
+            <div id="suma-total">
+              
+            </div>
+            <input id="btnRegistro" type="submit" class="button" value="Pay">
+          </div><!--total-->
+        </div><!--caja-->
+      </div><!--resumen-->
+
+    </form>
+  </section>
+
+
+
+  <footer class="site-footer">
+    <div class="container clearfix">
+      <div class="footer-info">
+        <h3>About <span>Web Design</span></h3>
+        <p>dfhsdkfdsf sdfsd fsdfsdf sfdf sd fs dfsd fsdfsd sdf sd fsd sd sd f sdfsd sd fsdf sdf sd </p>
+      </div>
+      <div class="last-tweets">
+        <h3>Last <span>tweets</span></h3>
+        <ul>
+          <li>sdfsdf sd sd sdf s fsd sdf sdfsd s sdf sdf sdf sd sdf sdf sd sdf</li>
+          <li>sdfsdf sd sd sdf s fsd sdf sdfsd s sdf sdf sdf sd sdf sdf sd sdf</li>
+          <li>sdfsdf sd sd sdf s fsd sdf sdfsd s sdf sdf sdf sd sdf sdf sd sdf</li>
+        </ul>
+
+      </div>
+      <div class="menu">
+        <h3><span>Social</span> media</h3>
+        <nav class="social-media">
+          <a href="#"><i class="fab f-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </nav>
+      </div>
+    </div>
+   <p class="copyright">Todos los derechos reservados</p>
+  </footer>
+  <div id="map" class="map" style="display: none;"></div>
+
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
